@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  {% load static %}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <script defer src="{% static 'js/main.js' %}"></script>
+
+    <title>{% block title %} Default Title {% endblock %}</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li>Posts</li>
+        <li>About</li>
+      </ul>
+    </nav>
+
+    <main>{% block content %} {% endblock %}</main>
+
+    <p>This page is the Home page</p>
+  </body>
+</html>
